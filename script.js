@@ -1,23 +1,36 @@
-let humanScore=0,computerScore=0;
 
-function playRound(humanChoice,computerChoice){
+
+function playGame(){
+    let humanScore=0,computerScore=0;
+
+    function playRound(humanChoice,computerChoice){
     if(humanChoice==="Rock"&&computerChoice==="Paper"){
         console.log(`You Lose!\n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
+        computerScore++;
     }else if(humanChoice==="Rock"&&computerChoice==="Scissor"){
         console.log(`You Win!\n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
+        humanScore++
     }else if(humanChoice==="Scissor"&&computerChoice==="Paper"){
         console.log(`You Win!\n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
+        humanScore++
     }else if(humanChoice==="Scissor"&&computerChoice==="Rock"){
         console.log(`You lose!\n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
+        computerScore++;
     }else if(humanChoice==="Paper"&&computerChoice==="Rock"){
         console.log(`You Win!\n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
+        humanScore++
     }else if(humanChoice==="Paper"&&computerChoice==="Scissor"){
         console.log(`You lose!\n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
+        computerScore++;
     }else {
         console.log(`It is a Tie! \n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
     }
 
 }
+
+}
+
+
 
 function getComputerChoice(){
     let computerIndex= Math.floor(Math.random()*3)+1;
