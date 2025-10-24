@@ -40,6 +40,8 @@ function playGame(){
 
 }
 
+displayFinalResult(humanScore,computerScore,numberOfRounds);
+
 }
 
 
@@ -72,16 +74,16 @@ function getHumanChoice(){
     }
 }
 
-function displayFinalResult(h1,c1){
-    if(h1>c2){
+function displayFinalResult(h1,c1,nR){
+    if(h1>c1){
         console.log(`Final Winner : User\n\n 
-            Computer:${c1} \t\t User:${h1}`)
-    }else if(h1===c2){
+            Number of rounds: ${nR}  Computer:${c1} \t\t User:${h1}`)
+    }else if(h1===c1){
         console.log(`Final Result: It is a Tie\n\n 
-            Computer:${c1} \t\t User:${h1}`)
+            Number of rounds: ${nR}  Computer:${c1} \t\t User:${h1}`)
     } else {
         console.log(`Final Winner : Computer\n\n 
-            Computer:${c1} \t\t User:${h1}`)
+            Number of rounds: ${nR}  Computer:${c1} \t\t User:${h1}`)
     }
 
 }
