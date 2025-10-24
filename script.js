@@ -1,30 +1,40 @@
 
-
 function playGame(){
+    let hChoice,cChoice;
+
     let humanScore=0,computerScore=0;
+    let numberOfRounds=5;
+
+     for(let i=1;i<=numberOfRounds;i++){
+         hChoice=getHumanChoice();
+         cChoice=getComputerChoice();
+        playRound(hChoice,cChoice);
+
+    }
 
     function playRound(humanChoice,computerChoice){
-    if(humanChoice==="Rock"&&computerChoice==="Paper"){
-        console.log(`You Lose!\n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
-        computerScore++;
-    }else if(humanChoice==="Rock"&&computerChoice==="Scissor"){
-        console.log(`You Win!\n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
-        humanScore++
-    }else if(humanChoice==="Scissor"&&computerChoice==="Paper"){
-        console.log(`You Win!\n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
-        humanScore++
-    }else if(humanChoice==="Scissor"&&computerChoice==="Rock"){
-        console.log(`You lose!\n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
-        computerScore++;
-    }else if(humanChoice==="Paper"&&computerChoice==="Rock"){
-        console.log(`You Win!\n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
-        humanScore++
-    }else if(humanChoice==="Paper"&&computerChoice==="Scissor"){
-        console.log(`You lose!\n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
-        computerScore++;
-    }else {
-        console.log(`It is a Tie! \n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
-    }
+         if(humanChoice==="Rock"&&computerChoice==="Paper"){
+             console.log(`You Lose!\n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
+             computerScore++;
+         }else if(humanChoice==="Rock"&&computerChoice==="Scissor"){
+             console.log(`You Win!\n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
+             humanScore++
+         }else if(humanChoice==="Scissor"&&computerChoice==="Paper"){
+             console.log(`You Win!\n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
+             humanScore++
+         }else if(humanChoice==="Scissor"&&computerChoice==="Rock"){
+             console.log(`You lose!\n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
+             computerScore++;
+         }else if(humanChoice==="Paper"&&computerChoice==="Rock"){
+             console.log(`You Win!\n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
+             humanScore++
+         }else if(humanChoice==="Paper"&&computerChoice==="Scissor"){
+             console.log(`You lose!\n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
+             computerScore++;
+         }else {
+             console.log(`It is a Tie! \n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
+         }
+
 
 }
 
@@ -59,4 +69,4 @@ function getHumanChoice(){
 
     }
 }
-playRound(getHumanChoice(),getComputerChoice());
+playGame();
