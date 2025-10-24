@@ -3,9 +3,10 @@ function playGame(){
     let hChoice,cChoice;
 
     let humanScore=0,computerScore=0;
-    let numberOfRounds=5;
+    let numberOfRounds=5,round;
 
      for(let i=1;i<=numberOfRounds;i++){
+        round=i;
          hChoice=getHumanChoice();
          cChoice=getComputerChoice();
         playRound(hChoice,cChoice);
@@ -13,6 +14,7 @@ function playGame(){
     }
 
     function playRound(humanChoice,computerChoice){
+        console.log(`ROUND ${round}`)
          if(humanChoice==="Rock"&&computerChoice==="Paper"){
              console.log(`You Lose!\n\nComputer's choice: ${computerChoice} and Your choice: ${humanChoice}`)
              computerScore++;
@@ -68,5 +70,19 @@ function getHumanChoice(){
             return "not a valid input";
 
     }
+}
+
+function displayFinalResult(h1,c1){
+    if(h1>c2){
+        console.log(`Final Winner : User\n\n 
+            Computer:${c1} \t\t User:${h1}`)
+    }else if(h1===c2){
+        console.log(`Final Result: It is a Tie\n\n 
+            Computer:${c1} \t\t User:${h1}`)
+    } else {
+        console.log(`Final Winner : Computer\n\n 
+            Computer:${c1} \t\t User:${h1}`)
+    }
+
 }
 playGame();
